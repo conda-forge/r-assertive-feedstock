@@ -14,14 +14,16 @@ Summary: Lots of predicates (is_* functions) to check the state of your variable
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-assertive-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-assertive-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-assertive-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-assertive-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-assertive-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-assertive-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-assertive-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-assertive-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-assertive-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-assertive-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-assertive-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-assertive-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-assertive/badges/version.svg)](https://anaconda.org/conda-forge/r-assertive)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-assertive/badges/downloads.svg)](https://anaconda.org/conda-forge/r-assertive)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--assertive-green.svg)](https://anaconda.org/conda-forge/r-assertive) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-assertive.svg)](https://anaconda.org/conda-forge/r-assertive) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-assertive.svg)](https://anaconda.org/conda-forge/r-assertive) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-assertive.svg)](https://anaconda.org/conda-forge/r-assertive) |
 
 Installing r-assertive
 ======================
