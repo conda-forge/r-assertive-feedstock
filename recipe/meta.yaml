@@ -1,5 +1,4 @@
 {% set version = '0.3-5' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,20 +9,22 @@ package:
 source:
   fn: assertive_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/assertive_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/assertive/assertive_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/assertive_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/assertive/assertive_{{ version }}.tar.gz
   sha256: 23ff6c8893e9c0b5b6bf4009a10de42a4a3a86eec2c48e7b73ae2cd6295c8b2e
 
 build:
-  number: 1
+  merge_build_host: True  # [win]
+  number: 2
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-assertive.base >=0.0_4
     - r-assertive.code
@@ -41,7 +42,6 @@ requirements:
     - r-assertive.strings
     - r-assertive.types >=0.0_2
     - r-knitr
-
   run:
     - r-base
     - r-assertive.base >=0.0_4
@@ -63,7 +63,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('assertive')"  # [not win]
+    - $R -e "library('assertive')"           # [not win]
     - "\"%R%\" -e \"library('assertive')\""  # [win]
 
 about:
@@ -77,8 +77,10 @@ about:
 
 extra:
   recipe-maintainers:
+    - jenzopr
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
-    - jenzopr
+    - cbrueffer
+    - dbast
