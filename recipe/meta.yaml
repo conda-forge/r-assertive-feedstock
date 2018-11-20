@@ -14,9 +14,9 @@ source:
   sha256: 23ff6c8893e9c0b5b6bf4009a10de42a4a3a86eec2c48e7b73ae2cd6295c8b2e
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 2
-  skip: true  # [win32]
+  number: 1002
   rpaths:
     - lib/R/lib/
     - lib/
@@ -72,8 +72,7 @@ about:
   summary: Lots of predicates (is_* functions) to check the state of your variables, and assertions
     (assert_* functions) to throw errors if they aren't in the right form.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
