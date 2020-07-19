@@ -1,4 +1,4 @@
-{% set version = '0.3-5' %}
+{% set version = "0.3-5.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/assertive_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/assertive/assertive_{{ version }}.tar.gz
-  sha256: 23ff6c8893e9c0b5b6bf4009a10de42a4a3a86eec2c48e7b73ae2cd6295c8b2e
+  sha256: 0fa59cd52c244829a1ecd74f6bd1b8d246768d3ace69f656656a83da0226abb4
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1004
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -69,10 +69,9 @@ test:
 about:
   home: https://bitbucket.org/richierocks/assertive
   license: GPL (>= 3)
-  summary: Lots of predicates (is_* functions) to check the state of your variables, and assertions
-    (assert_* functions) to throw errors if they aren't in the right form.
+  summary: Lots of predicates (is_* functions) to check the state of your variables, and assertions (assert_* functions) to throw errors if they aren't in the right form.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
