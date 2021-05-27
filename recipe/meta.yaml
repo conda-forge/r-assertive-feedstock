@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: assertive_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/assertive_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/assertive/assertive_{{ version }}.tar.gz
@@ -68,7 +67,7 @@ test:
 
 about:
   home: https://bitbucket.org/richierocks/assertive
-  license: GPL (>= 3)
+  license: GPL-3.0-or-later
   summary: Lots of predicates (is_* functions) to check the state of your variables, and assertions (assert_* functions) to throw errors if they aren't in the right form.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
@@ -77,9 +76,3 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - jenzopr
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
