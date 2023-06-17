@@ -1,11 +1,11 @@
-About r-assertive
-=================
+About r-assertive-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-assertive-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bitbucket.org/richierocks/assertive
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-assertive-feedstock/blob/main/LICENSE.txt)
 
 Summary: Lots of predicates (is_* functions) to check the state of your variables, and assertions (assert_* functions) to throw errors if they aren't in the right form.
 
